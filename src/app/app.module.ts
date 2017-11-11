@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TweetsComponent } from './components/tweets/tweets.component';
 import { DataService } from './services/data.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,7 @@ import { DataService } from './services/data.service';
   imports: [
     BrowserModule,
     HttpModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [
     DataService,
