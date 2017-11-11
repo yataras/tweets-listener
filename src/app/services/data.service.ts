@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 import { OAuth } from 'oauthio-web';
 import { Observable } from 'rxjs/Observable';
-import { config } from '../../../.settings/config';
+import { config } from '../config/config';
 
 @Injectable()
 export class DataService {
