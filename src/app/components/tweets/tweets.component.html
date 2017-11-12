@@ -1,6 +1,15 @@
-<div>
-  <h1>tweets works! {{title}}</h1>
-  <h2>
-    <p *ngFor="let tweet of tweets">{{tweet.text}}</p>
-  </h2>
-</div>
+<mat-list>
+  <!-- <div>
+    <h1>tweets works! {{title}}</h1>
+    <h2>
+      <p *ngFor="let tweet of tweets">{{tweet.text}}</p>
+    </h2>
+  </div> -->
+
+  <mat-list-item *ngFor="let tweet of tweets">
+    <img mat-list-avatar src="{{tweet.user.profile_image_url}}" alt="{{tweet.user.name}}">
+    <h3 mat-line>
+      {{tweet.text}}
+    </h3>
+  </mat-list-item>
+</mat-list>
