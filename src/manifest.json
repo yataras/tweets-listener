@@ -37,5 +37,24 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "oauth-api",
+      "urls": [
+        "https://api.twitter.com/",
+        "https://oauth.io/auth/twitter/me/",
+        "https://oauth.io/auth/twitter/",
+        "https://oauth.io/api/extended-endpoints/",
+        "https://api.twitter.com/1.1/statuses/user_timeline.json",
+        "https://oauth.io/request/twitter/https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fuser_timeline.json"
+      ],
+      "cacheConfig": {
+        "maxSize": 1000,
+        "maxAge": "3d",
+        "timeout": "1m",
+        "strategy": "freshness"
+      }
+    }
   ]
 }

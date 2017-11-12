@@ -15,7 +15,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     HttpModule,
-    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    // environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [
     DataService,

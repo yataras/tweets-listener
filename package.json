@@ -12,7 +12,8 @@
     "ngsw-config": "node_modules/.bin/ngsw-config dist src/ngsw-config.json",
     "ngsw-copy": "cp node_modules/@angular/service-worker/ngsw-worker.js dist/",
     "build-prod-ngsw": "ng build --prod && npm run ngsw-config && npm run ngsw-copy",
-    "serve-prod-ngsw": "npm run build-prod-ngsw && http-server dist -p 8080"
+    "serve-prod-ngsw": "npm run build-prod-ngsw && http-server dist -p 8080",
+    "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js"
   },
   "private": true,
   "dependencies": {
@@ -48,6 +49,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "sw-precache-webpack-plugin": "^0.11.4",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"

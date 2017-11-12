@@ -12,15 +12,13 @@ export class TweetsComponent implements OnInit {
   title = 'Hello twitter!';
   tweets = [];
 
-  constructor(private dataservice: DataService) {
-    console.log('constructor run...');
-  }
+  constructor(private dataservice: DataService) {}
 
   ngOnInit() {
     this.dataservice.getTweets()
     .then((tweets) => {
-      console.log('tweets = ', tweets);
       this.tweets = tweets;
+      console.log('fetched tweets = ', tweets);
     });
   }
 }
