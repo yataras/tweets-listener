@@ -5,7 +5,16 @@ import { AppComponent } from './app.component';
 import { TweetsComponent } from './components/tweets/tweets.component';
 import { DataService } from './services/data.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { MatListModule, MatToolbarModule } from '@angular/material';
+import {
+  MatListModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatIconModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatSidenavModule,
+} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -16,7 +25,14 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     HttpModule,
-    MatListModule, MatToolbarModule
+    MatListModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
     // environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [

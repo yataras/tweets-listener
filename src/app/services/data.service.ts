@@ -39,4 +39,9 @@ export class DataService {
       return res;
     });
   }
+
+  clearCache() {
+    OAuth.clearCache('twitter');
+    localStorage.setItem('cached_tweets', null);
+  }
 }

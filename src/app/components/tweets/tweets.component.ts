@@ -9,16 +9,35 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./tweets.component.css']
 })
 export class TweetsComponent implements OnInit {
-  title = 'Hello twitter!';
   tweets = [];
+  mode = 'indeterminate';
+  showSpinner = true;
 
   constructor(private dataservice: DataService) {}
 
   ngOnInit() {
+    this.getTweets();
+  }
+
+  getTweets() {
     this.dataservice.getTweets()
     .then((tweets) => {
       this.tweets = tweets;
       console.log('fetched tweets = ', tweets);
+      this.mode = 'determinate';
+      this.showSpinner = false;
     });
+  }
+
+  signOut() {
+    this.dataservice.clearCache();
+    // this.showSpinner = false;
+    this.tweets = [];
+  }
+
+  signIn() {
+    this.dataservice.clearCache();
+    this.showSpinner = true;
+    this.getTweets();
   }
 }

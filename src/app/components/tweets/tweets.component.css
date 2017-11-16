@@ -1,0 +1,30 @@
+.mat-toolbar.mat-primary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar-menu, .sign-out {
+  cursor: pointer;
+}
+
+span.app-title {
+  margin: 0 auto;
+}
+
+mat-sidenav.tweets-menu-sidenav {
+  min-width: 30%;
+}
+
+.menu-items {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+span.sign-out {
+  margin: 15px;
+}
+
+.tweets-container {
+  height: 90vh;
+}
